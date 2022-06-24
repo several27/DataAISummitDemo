@@ -1,0 +1,55 @@
+name: mrr_reporting
+description: ''
+version: 0.0.1
+author: maciej+guides@prophecy.io
+language: python
+buildSystem: wheel
+pipelines: {}
+datasets:
+  datasets/nations:
+    name: nations
+    description: ''
+    author: maciej+guides@prophecy.io
+    createdAt: '2022-06-24 00:15:36'
+    physicalDatasets:
+      dev:
+        fabricId: 1436
+        datasetType: File
+        description: ''
+        author: maciej+guides@prophecy.io
+        createdAt: '2022-06-24 00:15:36'
+  datasets/regions:
+    name: regions
+    description: ''
+    author: maciej+guides@prophecy.io
+    createdAt: '2022-06-24 00:16:06'
+    physicalDatasets:
+      dev:
+        fabricId: 1436
+        datasetType: File
+        description: ''
+        author: maciej+guides@prophecy.io
+        createdAt: '2022-06-24 00:16:06'
+  datasets/customers:
+    name: customers_nations
+    description: ''
+    author: maciej+guides@prophecy.io
+    createdAt: '2022-06-24 00:13:42'
+    physicalDatasets:
+      dev:
+        fabricId: 1436
+        datasetType: File
+        description: ''
+        author: maciej+guides@prophecy.io
+        createdAt: '2022-06-24 00:13:42'
+templates: {}
+jobs: {}
+libraries: []
+subgraphs:
+  subgraphs/customer_details:
+    name: customer_details
+    description: ''
+    author: maciej+guides@prophecy.io
+    language: python
+    createdAt: '2022-06-24 00:16:45'
+dependencies: '[]'
