@@ -1,6 +1,6 @@
 name: mrr_reporting
 description: ''
-version: 0.0.1
+version: '0.1'
 author: maciej+guides@prophecy.io
 language: python
 buildSystem: wheel
