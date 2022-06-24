@@ -4,7 +4,7 @@ from pyspark.sql.types import *
 from prophecy.utils import *
 from . import *
 
-def customer_details(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def customer_details_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
     df_nations = nations(spark)
     df_regions = regions(spark)
     df_customers_nations = customers_nations(spark)
