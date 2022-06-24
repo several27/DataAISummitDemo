@@ -1,0 +1,62 @@
+{
+  "metainfo" : {
+    "type" : "Databricks",
+    "fabricId" : "1436",
+    "jobId" : "7750/jobs/monthly_reporting",
+    "name" : "monthly_reporting",
+    "schedule" : "0 0 0 1 * ? *",
+    "enabled" : true,
+    "defaultClusterSize" : "small",
+    "availableClusterSizes" : [ "small" ],
+    "alerting" : {
+      "emails" : "maciej@prophecy.io",
+      "onStart" : false,
+      "onSuccess" : true,
+      "onFailure" : true
+    },
+    "processDefaultSettings" : {
+      "type" : "Inherited",
+      "retries" : 1,
+      "alerting" : {
+        "emails" : "",
+        "onStart" : false,
+        "onSuccess" : false,
+        "onFailure" : false
+      }
+    }
+  },
+  "processes" : {
+    "_0HN7n1Rmn_lnbF9z4fF-" : {
+      "id" : "_0HN7n1Rmn_lnbF9z4fF-",
+      "component" : "Pipeline",
+      "metadata" : {
+        "label" : "customers_spending",
+        "slug" : "customers_spending",
+        "x" : 100,
+        "y" : 100
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in"
+        } ],
+        "outputs" : [ {
+          "id" : "out"
+        } ]
+      },
+      "settings" : {
+        "type" : "Inherited",
+        "alerting" : {
+          "emails" : "",
+          "onStart" : false,
+          "onSuccess" : false,
+          "onFailure" : false
+        }
+      },
+      "properties" : {
+        "pipelineId" : "7750/pipelines/customers_spending",
+        "configurations" : [ ]
+      }
+    }
+  },
+  "connections" : [ ]
+}
