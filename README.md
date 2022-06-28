@@ -23,3 +23,7 @@ Release
 *** Release notes for version: 0.6 ***
 
 release
+
+*** Release notes for version: 0.7 ***
+
+release
