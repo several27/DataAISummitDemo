@@ -11,3 +11,7 @@ release
 *** Release notes for version: 0.3 ***
 
 release
+
+*** Release notes for version: 0.4 ***
+
+Release
