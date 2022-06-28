@@ -7,8 +7,8 @@ from prophecy.utils import *
 from job.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_orders_source = orders_source(spark)
     df_customers_source = customers_source(spark)
+    df_orders_source = orders_source(spark)
     df_by_customer_id = by_customer_id(spark, df_customers_source, df_orders_source)
     df_sum_amounts = sum_amounts(spark, df_by_customer_id)
     df_customer_details_1 = customer_details_1(spark, df_sum_amounts)

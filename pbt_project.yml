@@ -5,13 +5,13 @@ author: maciej+guides@prophecy.io
 language: python
 buildSystem: wheel
 pipelines:
-  pipelines/customers_spending:
-    name: customers_spending
+  pipelines/customers_spendings:
+    name: customers_spendings
     description: ''
     author: maciej+guides@prophecy.io
     mode: batch
     language: python
-    createdAt: '2022-06-28 15:26:28'
+    createdAt: '2022-06-28 17:35:16'
     datasets:
       inputs:
       - 7750/datasets/customers_source
@@ -51,26 +51,26 @@ datasets:
     name: orders_source
     description: ''
     author: maciej+guides@prophecy.io
-    createdAt: '2022-06-28 15:30:16'
+    createdAt: '2022-06-28 17:38:53'
     physicalDatasets:
       dev:
         fabricId: 1436
         datasetType: File
         description: ''
         author: maciej+guides@prophecy.io
-        createdAt: '2022-06-28 15:30:16'
+        createdAt: '2022-06-28 17:38:53'
   datasets/customers_source:
     name: customers_source
     description: ''
     author: maciej+guides@prophecy.io
-    createdAt: '2022-06-28 15:29:37'
+    createdAt: '2022-06-28 17:38:17'
     physicalDatasets:
       dev:
         fabricId: 1436
         datasetType: File
         description: ''
         author: maciej+guides@prophecy.io
-        createdAt: '2022-06-28 15:29:37'
+        createdAt: '2022-06-28 17:38:17'
   datasets/nations:
     name: nations
     description: ''
@@ -87,18 +87,18 @@ datasets:
     name: report
     description: ''
     author: maciej+guides@prophecy.io
-    createdAt: '2022-06-28 15:35:13'
+    createdAt: '2022-06-28 17:44:15'
     physicalDatasets:
       dev:
         fabricId: 1436
         datasetType: Database
         description: ''
         author: maciej+guides@prophecy.io
-        createdAt: '2022-06-28 15:35:13'
+        createdAt: '2022-06-28 17:44:15'
 templates: {}
 jobs:
-  jobs/monthly_reporting:
-    name: monthly_reporting
+  jobs/monthly_spendings:
+    name: monthly_spendings
     description: ''
     fabricUID: 1436
     scheduler:
@@ -112,9 +112,9 @@ jobs:
       onSuccess: true
       onFailure: true
     pipelines:
-    - 7750/pipelines/customers_spending
+    - 7750/pipelines/customers_spendings
     enabled: true
-    createdAt: '2022-06-28 15:36:54'
+    createdAt: '2022-06-28 17:45:53'
     author: maciej+guides@prophecy.io
 libraries: []
 subgraphs:
