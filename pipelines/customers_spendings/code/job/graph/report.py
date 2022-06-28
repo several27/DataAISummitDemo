@@ -5,4 +5,4 @@ from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
 def report(spark: SparkSession, in0: DataFrame):
-    in0.write.format("delta").mode("overwrite").saveAsTable("maciej.customer_spendings_3")
+    in0.write.format("delta").mode("overwrite").saveAsTable("maciej.customer_spendings_4")

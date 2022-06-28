@@ -11,7 +11,7 @@ pipelines:
     author: maciej+guides@prophecy.io
     mode: batch
     language: python
-    createdAt: '2022-06-28 17:35:16'
+    createdAt: '2022-06-28 23:00:48'
     datasets:
       inputs:
       - 7750/datasets/customers_source
@@ -51,26 +51,26 @@ datasets:
     name: orders_source
     description: ''
     author: maciej+guides@prophecy.io
-    createdAt: '2022-06-28 17:38:53'
+    createdAt: '2022-06-28 23:04:18'
     physicalDatasets:
       dev:
         fabricId: 1436
         datasetType: File
         description: ''
         author: maciej+guides@prophecy.io
-        createdAt: '2022-06-28 17:38:53'
+        createdAt: '2022-06-28 23:04:18'
   datasets/customers_source:
     name: customers_source
     description: ''
     author: maciej+guides@prophecy.io
-    createdAt: '2022-06-28 17:38:17'
+    createdAt: '2022-06-28 23:03:43'
     physicalDatasets:
       dev:
         fabricId: 1436
         datasetType: File
         description: ''
         author: maciej+guides@prophecy.io
-        createdAt: '2022-06-28 17:38:17'
+        createdAt: '2022-06-28 23:03:43'
   datasets/nations:
     name: nations
     description: ''
@@ -87,18 +87,18 @@ datasets:
     name: report
     description: ''
     author: maciej+guides@prophecy.io
-    createdAt: '2022-06-28 17:44:15'
+    createdAt: '2022-06-28 23:08:48'
     physicalDatasets:
       dev:
         fabricId: 1436
         datasetType: Database
         description: ''
         author: maciej+guides@prophecy.io
-        createdAt: '2022-06-28 17:44:15'
+        createdAt: '2022-06-28 23:08:48'
 templates: {}
 jobs:
-  jobs/monthly_spendings:
-    name: monthly_spendings
+  jobs/monthly_reporting:
+    name: monthly_reporting
     description: ''
     fabricUID: 1436
     scheduler:
@@ -114,7 +114,7 @@ jobs:
     pipelines:
     - 7750/pipelines/customers_spendings
     enabled: true
-    createdAt: '2022-06-28 17:45:53'
+    createdAt: '2022-06-28 23:10:21'
     author: maciej+guides@prophecy.io
 libraries: []
 subgraphs:
