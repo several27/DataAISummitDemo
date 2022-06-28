@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 setup(
-    name = 'customers_orders',
+    name = 'customers_spending',
     version = '1.0',
     packages = find_packages(include = ('job*', )),
     description = 'workflow',

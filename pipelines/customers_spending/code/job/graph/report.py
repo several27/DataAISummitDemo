@@ -4,5 +4,5 @@ from pyspark.sql.types import *
 from job.config.ConfigStore import *
 from job.udfs.UDFs import *
 
-def orders(spark: SparkSession) -> DataFrame:
-    return spark.read.format("delta").load("dbfs:/databricks-datasets/tpch/delta-001/customer/")
+def report(spark: SparkSession, in0: DataFrame):
+    in0.write.format("delta").mode("overwrite").saveAsTable("maciej.customer_spendings_2")

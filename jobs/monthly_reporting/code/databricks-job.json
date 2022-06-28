@@ -2,23 +2,23 @@
   "fabricId" : "1436",
   "components" : [ {
     "PipelineComponent" : {
-      "id" : "7750/pipelines/customers_orders",
-      "nodeName" : "customers_orders",
-      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.3/7750/customers_orders-1.0-py3-none-any.whl",
+      "id" : "7750/pipelines/customers_spending",
+      "nodeName" : "customers_spending",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.4/7750/customers_spending-1.0-py3-none-any.whl",
       "language" : "python"
     }
   } ],
   "request" : {
     "CreateNewJobRequest" : {
       "format" : "MULTI_TASK",
-      "name" : "monthly_customer_spendings",
+      "name" : "monthly_reporting",
       "job_clusters" : [ {
         "job_cluster_key" : "small-109548807",
         "new_cluster" : {
           "spark_version" : "10.4.x-scala2.12",
           "node_type_id" : "i3.xlarge",
           "spark_conf" : {
-            "prophecy.metadata.job.uri" : "7750/jobs/monthly_customer_spendings",
+            "prophecy.metadata.job.uri" : "7750/jobs/monthly_reporting",
             "prophecy.metadata.fabric.id" : "1436",
             "prophecy.execution.service.url" : "wss://execution.dp.test.prophecy.io/eventws"
           },
@@ -31,22 +31,22 @@
         "on_failure" : [ "maciej@prophecy.io" ]
       },
       "tasks" : [ {
-        "task_key" : "customers_orders",
+        "task_key" : "customers_spending",
         "new_cluster" : {
           "spark_version" : "10.4.x-scala2.12",
           "node_type_id" : "i3.xlarge",
           "spark_conf" : {
-            "prophecy.metadata.job.uri" : "7750/jobs/monthly_customer_spendings",
+            "prophecy.metadata.job.uri" : "7750/jobs/monthly_reporting",
             "prophecy.metadata.fabric.id" : "1436",
             "prophecy.metadata.is.interactive.run" : "false",
             "prophecy.execution.service.url" : "wss://execution.dp.test.prophecy.io/eventws",
-            "prophecy.metadata.pipeline.uri" : "7750/pipelines/customers_orders"
+            "prophecy.metadata.pipeline.uri" : "7750/pipelines/customers_spending"
           },
           "num_workers" : 1,
           "driver_node_type_id" : "i3.xlarge"
         },
         "python_wheel_task" : {
-          "package_name" : "customers_orders",
+          "package_name" : "customers_spending",
           "entry_point" : "main",
           "parameters" : [ "-C", "fabricName=dev" ]
         },
@@ -60,7 +60,7 @@
             "package" : "prophecy-libs"
           }
         }, {
-          "whl" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.3/7750/customers_orders-1.0-py3-none-any.whl"
+          "whl" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.4/7750/customers_spending-1.0-py3-none-any.whl"
         } ],
         "email_notifications" : { },
         "max_retries" : 1
@@ -69,7 +69,7 @@
       "schedule" : {
         "quartz_cron_expression" : "0 0 0 1 * ? *",
         "timezone_id" : "GMT",
-        "pause_status" : "PAUSED"
+        "pause_status" : "UNPAUSED"
       }
     }
   }
