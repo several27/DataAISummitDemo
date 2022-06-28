@@ -2,39 +2,35 @@ version: 1
 schema:
   type: struct
   fields:
-  - name: o_orderkey
+  - name: c_custkey
     type: long
     nullable: true
     metadata: {}
-  - name: o_custkey
-    type: long
-    nullable: true
-    metadata: {}
-  - name: o_orderstatus
+  - name: c_name
     type: string
     nullable: true
     metadata: {}
-  - name: o_totalprice
+  - name: c_address
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c_nationkey
+    type: long
+    nullable: true
+    metadata: {}
+  - name: c_phone
+    type: string
+    nullable: true
+    metadata: {}
+  - name: c_acctbal
     type: decimal(18,2)
     nullable: true
     metadata: {}
-  - name: o_orderdate
-    type: date
-    nullable: true
-    metadata: {}
-  - name: o_orderpriority
+  - name: c_mktsegment
     type: string
     nullable: true
     metadata: {}
-  - name: o_clerk
-    type: string
-    nullable: true
-    metadata: {}
-  - name: o_shippriority
-    type: integer
-    nullable: true
-    metadata: {}
-  - name: o_comment
+  - name: c_comment
     type: string
     nullable: true
     metadata: {}
