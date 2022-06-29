@@ -2,8 +2,8 @@
   "metainfo" : {
     "type" : "Databricks",
     "fabricId" : "1436",
-    "jobId" : "7750/jobs/monthly_reporting",
-    "name" : "monthly_reporting",
+    "jobId" : "7750/jobs/monthly_report",
+    "name" : "monthly_report",
     "schedule" : "0 0 0 1 * ? *",
     "enabled" : true,
     "defaultClusterSize" : "small",
@@ -26,8 +26,8 @@
     }
   },
   "processes" : {
-    "guw7Bz_rg_7vR99gCFkp0" : {
-      "id" : "guw7Bz_rg_7vR99gCFkp0",
+    "s9V9msbB6bhjT5P7JZ7KC" : {
+      "id" : "s9V9msbB6bhjT5P7JZ7KC",
       "component" : "Pipeline",
       "metadata" : {
         "label" : "customers_spendings",

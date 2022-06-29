@@ -4,21 +4,21 @@
     "PipelineComponent" : {
       "id" : "7750/pipelines/customers_spendings",
       "nodeName" : "customers_spendings",
-      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.6/7750/customers_spendings-1.0-py3-none-any.whl",
+      "path" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.7/7750/customers_spendings-1.0-py3-none-any.whl",
       "language" : "python"
     }
   } ],
   "request" : {
     "CreateNewJobRequest" : {
       "format" : "MULTI_TASK",
-      "name" : "monthly_reporting",
+      "name" : "monthly_report",
       "job_clusters" : [ {
         "job_cluster_key" : "small-109548807",
         "new_cluster" : {
           "spark_version" : "10.4.x-scala2.12",
           "node_type_id" : "i3.xlarge",
           "spark_conf" : {
-            "prophecy.metadata.job.uri" : "7750/jobs/monthly_reporting",
+            "prophecy.metadata.job.uri" : "7750/jobs/monthly_report",
             "prophecy.metadata.fabric.id" : "1436",
             "prophecy.execution.service.url" : "wss://execution.dp.test.prophecy.io/eventws"
           },
@@ -36,7 +36,7 @@
           "spark_version" : "10.4.x-scala2.12",
           "node_type_id" : "i3.xlarge",
           "spark_conf" : {
-            "prophecy.metadata.job.uri" : "7750/jobs/monthly_reporting",
+            "prophecy.metadata.job.uri" : "7750/jobs/monthly_report",
             "prophecy.metadata.fabric.id" : "1436",
             "prophecy.metadata.is.interactive.run" : "false",
             "prophecy.execution.service.url" : "wss://execution.dp.test.prophecy.io/eventws",
@@ -60,7 +60,7 @@
             "package" : "prophecy-libs"
           }
         }, {
-          "whl" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.6/7750/customers_spendings-1.0-py3-none-any.whl"
+          "whl" : "dbfs:/FileStore/prophecy/artifacts/prophecy/test/pipelines/mrr_reporting/0.7/7750/customers_spendings-1.0-py3-none-any.whl"
         } ],
         "email_notifications" : { },
         "max_retries" : 1
