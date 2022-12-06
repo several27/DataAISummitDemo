@@ -22,6 +22,17 @@ pipelines:
       outputs:
       - 7750/datasets/reports
     dependencies: {}
+  pipelines/CustomerSpending:
+    name: CustomerSpending
+    description: ''
+    author: ashishpatel0720@gmail.com
+    mode: batch
+    language: python
+    createdAt: '2022-12-06 00:03:26'
+    datasets:
+      inputs: []
+      outputs: []
+    dependencies: {}
 datasets:
   datasets/regions:
     name: regions
