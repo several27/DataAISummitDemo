@@ -1,6 +1,6 @@
 name: mrr_reporting
 description: ''
-version: '0.8'
+version: 0.8-SNAPSHOT
 author: maciej+guides@prophecy.io
 language: python
 buildSystem: wheel
@@ -103,6 +103,7 @@ jobs:
     fabricUID: 1436
     scheduler:
       Databricks: {}
+    cloudProvider: null
     jobSize: small
     scheduleCron: 0 0 0 1 * ? *
     timeout: null
@@ -113,6 +114,7 @@ jobs:
       onFailure: true
     pipelines:
     - 7750/pipelines/customers_spendings
+    jobClusterMode: null
     enabled: true
     createdAt: '2022-06-29 00:14:43'
     author: maciej+guides@prophecy.io
@@ -124,4 +126,8 @@ subgraphs:
     author: maciej+guides@prophecy.io
     language: python
     createdAt: '2022-06-24 00:16:45'
+sqlModels: {}
+sqlPipeline: null
 dependencies: []
+projectDependencies: {}
+pipelineConfigurations: {}
